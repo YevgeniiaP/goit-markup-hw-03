@@ -16,21 +16,25 @@
    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+
    <!-- Шапка сайта -->
    <header class="page-header">
-      <nav>
-         <a href="WebStudio" class="logo"><span>Web</span>Studio</a>
-         <ul class="site-nav">
-            <li class="site-nav-list-item"><a href="./index.html" class="site-nav-items current">Студия</a></li>
-            <li class="site-nav-list-item"><a href="./portfolio.html" class="site-nav-items">Портфолио</a></li>
-            <li class="site-nav-list-item"><a href="" class="site-nav-items">Контакты</a></li>
+      <div class="header-container">
+         <nav class="nav-container">
+            <a href="./index.html" class="logo"><span>Web</span>Studio</a>
+            <ul class="site-nav">
+               <li class="site-nav-list-item"><a href="./index.html" class="site-nav-items current">Студия</a></li>
+               <li class="site-nav-list-item"><a href="./portfolio.html" class="site-nav-items">Портфолио</a></li>
+               <li class="site-nav-list-item"><a href="" class="site-nav-items">Контакты</a></li>
+            </ul>
+         </nav>
+         <ul class="contacts">
+            <li><a href="mailto:info@devstudio.com" class="contacts-items">info@devstudio.com</a></li>
+            <li><a href="tel:+380961111111" class="contacts-items">+380961111111</a></li>
          </ul>
-      </nav>
-      <ul class="contacts">
-         <li><a href="mailto:info@devstudio.com" class="contacts-items">info@devstudio.com</a></li>
-         <li><a href="tel:+380961111111" class="contacts-items">+380961111111</a></li>
-      </ul>
+      </div>
    </header>
+
 <!-- Основной контент -->
 <main>
 <section class="title-section">
@@ -38,7 +42,7 @@
    <button type="button" class="btn">Заказать услугу</button>
   </section>
 <section> 
-   <h2 class="hidden-title">Преимущества нашей компании</h2> 
+   <h2 class="visually-hidden">Преимущества нашей компании</h2> 
    <ul>
       <li class="list-items">
         <h3 class="headline">Внимание к деталям</h3> 
@@ -107,18 +111,18 @@
    </ul>
 </section>
 </main>
-<!-- Футер -->
    <footer class="footer-section">
-      <a href="WebStudio" class="logo-footer"><span>Web</span>Studio</a>
-      <address>
-         <ul class="address-section">
-            <li class="address-section-item"><a class="exact-adress-item">г. Киев, пр-т Леси Украинки, 26</a></li>
-            <li class="address-section-item"><a href="mailto:info@example.com" class="adress-item">info@example.com</a>
-            </li>
-            <li class="address-section-item"><a href="tel:+380991111111" class="adress-item">+38 099 111 11 11</a></li>
-         </ul>
-      </address>
-   </footer>
+      <div class="footer-container">
+         <a href="./index.html" class="logo-footer"><span>Web</span>Studio</a>
+         <address>
+            <ul class="address-section">
+               <li class="address-section-item"><a class="exact-adress-item">г. Киев, пр-т Леси Украинки, 26</a></li>
+               <li class="address-section-item"><a href="mailto:info@example.com" class="adress-item">info@example.com</a>
+               </li>
+               <li class="address-section-item"><a href="tel:+380991111111" class="adress-item">+38 099 111 11 11</a></li>
+            </ul>
+         </address>
+      </div>
+      </footer>
    </body>
-   
    </html>

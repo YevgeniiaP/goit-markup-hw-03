@@ -19,9 +19,9 @@ button {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--logo-color-footer);
   font-family: "Roboto", "Raleway", sans-serif;
-  color: #212121;
+  color: var(--nav-color);
 }
 :root {
   --logo-color-main: #2196f3;
@@ -33,40 +33,28 @@ body {
   --text-color: #757575;
   --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --nav-color: #212121;
+  --border-line-color: #ececec;
 }
 /* Header */
-.body-doc {
-  width: 1600px;
-  height: 1880px;
-}
-
 .header-container {
-  width: 1600px;
-  margin: 0px;
-  display: inline-block;
-  flex-direction: row;
-  justify-content: flex-start;
-  border-bottom: 1px solid #ececec;
-  padding: 20px;
-  margin-top: 16px;
-  margin-bottom: 78px;
-}
-
-.portfolio-container {
-  width: 1170px;
-  margin-top: 78px;
-  margin-right: 215px;
-  margin-bottom: 94px;
+  display: flex;
+  width: 1200px;
   margin-left: 215px;
+  margin-right: 215px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid var(--border-line-color);
   outline: 2px solid tomato;
-}
-
-.page-header {
   background: var(--logo-color-footer);
-  outline: 2px solid tomato;
+  align-items: center;
 }
 
 .logo {
+  width: 145px;
+  margin-top: 25px;
+  margin-bottom: 24px;
+  margin-right: 93px;
+
   font-family: "Raleway";
   font-weight: bold;
   color: var(--logo-color-header);
@@ -74,27 +62,16 @@ body {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
-  width: 145px;
-  padding-top: 31px;
-  padding-left: 215px;
 }
-.logo-footer {
-  font-family: "Raleway";
-  font-weight: bold;
-  color: var(--logo-color-footer);
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  width: 145px;
-  padding-top: 60;
-  padding-right: 1240px;
-  padding-bottom: 20px;
-  padding-left: 215px;
+.nav-container {
+  display: flex;
+  align-items: center;
 }
-
 .page-header span {
   color: var(--logo-color-main);
+}
+.site-nav-list-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .site-nav .site-nav-list-item .current {
@@ -106,8 +83,8 @@ body {
 }
 .site-nav {
   width: 294px;
-  padding-top: 32px;
-  padding-left: 453px;
+  margin-right: 331px;
+  display: flex;
 }
 .site-nav-items {
   text-decoration: none;
@@ -118,14 +95,17 @@ body {
   color: var(--nav-color);
 }
 .site-nav .site-nav-items:hover,
-.site-nav .site-nav-items:focus {
-  color: var(--logo-color-main);
-}
+.site-nav .site-nav-items:focus,
 .site-nav .site-nav-items:active {
   color: var(--logo-color-main);
 }
+
 .site-nav-items:visited {
   color: var(--nav-color);
+}
+
+.contacts-list-items:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contacts-items {
@@ -143,8 +123,8 @@ body {
   text-decoration: none;
   list-style-type: none;
   width: 135px;
-  padding-top: 32px;
-  padding-left: 1078px;
+  margin-right: 0px;
+  display: flex;
 }
 
 .contacts .contacts-items:hover,
@@ -153,8 +133,26 @@ body {
 }
 
 /* Main */
-.portfilio-btn-contaner {
+.portfolio-container {
   text-align: center;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 215px;
+  margin-right: 215px;
+  margin-top: 34px;
+  margin-bottom: 94px;
+  outline: 2px solid tomato;
+}
+
+.filter-container {
+  text-align: center;
+  width: 611px;
+  margin-top: 78px;
+  margin-right: 280px;
+  margin-bottom: 34px;
+  margin-left: 280px;
+  padding-bottom: 50px;
 }
 
 .filter-btn {
@@ -174,7 +172,9 @@ body {
   font-size: 16px;
   color: var(--nav-color);
   line-height: 1.6;
+  padding: 6px 22px 6px 22px;
 }
+
 .portfolio-filter .portfolio-items .button {
   font-weight: 500;
   font-size: 16px;
@@ -199,24 +199,45 @@ body {
   display: inline;
 }
 
-.hidden-title {
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
   width: 1px;
-  height: 1px;
-  margin: -1px;
+  overflow: hidden;
   border: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
-.portfolio-exmls {
-  text-align: center;
+.types-of-services {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-left: -30px;
+  margin-top: -30px;
+  align-items: center;
+}
+.portfolio-exmpls-container {
+  outline: 2px solid tomato;
+  width: 1170px;
 }
 .services-item {
   list-style-type: none;
+  flex-basis: calc((100% - 90px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.services-container {
+  border: 1px solid #eeeeee;
+  width: 370px;
+  padding-top: 0px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
 }
 .name {
   font-weight: bold;
@@ -232,12 +253,10 @@ body {
 /* Main for index.html */
 .title-section {
   background-color: var(--footer-background-color);
-  width: 1600px;
+  width: 1200px;
   height: 600px;
 }
 .title-section .title {
-  left: 452px;
-  top: 280px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
@@ -312,16 +331,36 @@ body {
 }
 
 /* Footer */
-.footer-container {
-  width: 1600px;
-  height: 252px;
-  margin-top: 94px;
-  margin-bottom: 0px;
-  outline: 2px solid tomato;
-}
 .footer-section {
+  width: 1200px;
+  margin-top: 94px;
+  margin-left: 215px;
+
+  padding-left: 15px;
+  margin-right: 15px;
+  outline: 2px solid tomato;
   background-color: var(--footer-background-color);
 }
+
+.logo-footer {
+  width: 145px;
+  padding-top: 60px;
+  padding-right: 1000px;
+  padding-bottom: 20px;
+
+  font-family: "Raleway";
+  font-weight: bold;
+  color: var(--logo-color-footer);
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.footer-section span {
+  color: var(--logo-color-main);
+}
+
 .a {
   text-decoration: none;
 }
@@ -333,20 +372,13 @@ body {
   text-decoration: none;
 }
 
-.address-section-item {
+.address-section {
   width: 231px;
   margin-top: 20px;
   margin-right: 1154;
   margin-bottom: 60;
-  margin-left: 215px;
 }
-.adress-item {
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  font-style: normal;
-  color: var(--footer-color);
-}
+
 .exact-adress-item {
   font-size: 14px;
   line-height: 1.7;
@@ -354,8 +386,12 @@ body {
   font-style: normal;
   color: var(--logo-color-footer);
 }
-.footer-section span {
-  color: var(--logo-color-main);
+.adress-item {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  font-style: normal;
+  color: var(--footer-color);
 }
 
 .address-section .address-section-item .adress-item:hover,
