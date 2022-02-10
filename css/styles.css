@@ -34,8 +34,13 @@ body {
   --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --nav-color: #212121;
   --border-line-color: #ececec;
+  --services-container-color: #eeeeee;
 }
 
+.main-page {
+  display: block;
+  width: 1600px;
+}
 /* Header */
 .header-container {
   display: flex;
@@ -236,12 +241,18 @@ body {
 }
 
 .services-container {
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--services-container-color);
   width: 370px;
   padding-top: 0px;
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
+}
+.foto {
+  margin: 0px;
+}
+img {
+  display: block;
 }
 .name {
   font-weight: bold;
@@ -256,61 +267,47 @@ body {
 }
 /* Main for index.html */
 .main-container {
-  outline: 2px solid tomato;
   width: 1230px;
   text-align: center;
   padding-left: 15px;
   padding-right: 15px;
-  margin-top: 34px;
   margin-left: auto;
   margin-right: auto;
-}
-.hero-container {
-  outline: 2px solid tomato;
-}
-
-.first-container {
-  outline: 2px solid tomato;
-}
-.benefits-container {
-  display: flex;
-  width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 94px;
-}
-
-.second-container {
-  outline: 2px solid tomato;
-}
-
-.list-items-container {
-  width: 270px;
-  text-align: left;
-  padding: 0px;
+  margin-top: 0px;
 }
 
 .title-section {
   background-color: var(--footer-background-color);
+  display: block;
   width: 1200px;
   height: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.btn-container {
+  display: block;
+  padding: 10px 32px 10px 32px;
+  margin: 30px 484px 200px 484px;
+}
+
 .title-section .title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
   letter-spacing: 0.06em;
-  align-items: center;
   color: var(--logo-color-footer);
   text-transform: uppercase;
+  text-align: center;
+  align-items: center;
+  padding-top: 200px;
+  margin-left: 237px;
+  width: 696px;
 }
 
 .title-section .btn {
-  position: absolute;
   width: 200px;
   height: 50px;
-  left: 700px;
-  top: 430px;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.9;
@@ -323,6 +320,21 @@ body {
   box-shadow: var(--box-shadow);
   border-radius: 4px;
   cursor: pointer;
+  display: block;
+}
+
+.benefits-container {
+  display: flex;
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 94px;
+}
+
+.list-items-container {
+  width: 270px;
+  text-align: left;
+  padding: 0px;
 }
 
 .headline {
@@ -348,37 +360,29 @@ body {
   margin-right: auto;
 }
 
-.team-section {
-  background-color: var(--team-color);
-}
-
-.team-group {
-  display: flex;
-}
 .list-items {
   width: 270px;
   list-style-type: none;
   margin-right: 30px;
-  padding: 10 59 30 60;
+  justify-content: space-between;
 }
 
-.list-items:last-child {
+.activity-list-items {
+  width: 1170px;
+  list-style-type: none;
+  margin-right: 30px;
+}
+.margin-right:last-child {
   margin-right: 0px;
 }
 
-.team-container {
-  display: contents;
+.team-section {
+  background-color: var(--team-color);
   width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 94px;
-  margin-bottom: 0px;
 }
-.personal-information {
-  background-color: var(--logo-color-footer);
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+
 .subtitle {
   font-weight: bold;
   font-size: 36px;
@@ -387,7 +391,31 @@ body {
   text-align: center;
   margin-bottom: 50px;
   margin-top: 94px;
-  padding-top: 68px;
+}
+
+.team-container {
+  display: block;
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-group {
+  display: flex;
+  margin-right: 215px;
+  margin-left: 215px;
+  margin-bottom: 94px;
+}
+
+.personal-information {
+  background-color: var(--logo-color-footer);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 4px;
+  border-bottom: 1px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .headline-name {
@@ -412,8 +440,10 @@ body {
   width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-top: 60px;
+  padding-right: 215px;
+  padding-bottom: 60px;
+  padding-left: 215px;
   background-color: var(--footer-background-color);
 }
 
