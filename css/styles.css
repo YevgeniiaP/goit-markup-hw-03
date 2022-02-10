@@ -68,6 +68,7 @@ body {
 .header-block {
   display: flex;
   border-bottom: 1px solid var(--border-line-color);
+  width: 1200px;
   background: var(--logo-color-footer);
   align-items: center;
 }
@@ -455,8 +456,6 @@ img {
 }
 
 .footer-section {
-  width: 1200px;
-  margin: 0px auto;
   background-color: var(--footer-background-color);
 }
 
