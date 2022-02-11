@@ -256,7 +256,7 @@ body {
 .services-container {
   border: 1px solid var(--services-container-color);
   width: 370px;
-  padding-top: 0px;
+  padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
@@ -453,9 +453,6 @@ img {
 
 /* End of main for index.html */
 /* Footer */
-
-.footer {
-}
 
 .footer-section {
   background-color: var(--footer-background-color);
